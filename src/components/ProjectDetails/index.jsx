@@ -1,6 +1,7 @@
 import { CloseRounded, GitHub, LinkedIn } from '@mui/icons-material';
 import { Modal } from '@mui/material';
 import React from 'react'
+import AnimatedCursor from 'react-animated-cursor';
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -188,6 +189,27 @@ const index = ({ openModal, setOpenModal }) => {
         <Modal open={true} onClose={() => setOpenModal({ state: false, project: null })}>
             <Container>
                 <Wrapper>
+            <AnimatedCursor
+      innerSize={14}
+      outerSize={8}
+      color='251, 146, 60'
+      outerAlpha={0.2}
+      innerScale={0.4}
+      outerScale={8}
+      clickables={[
+        'a',
+        'input[type="text"]',
+        'input[type="email"]',
+        'input[type="number"]',
+        'input[type="submit"]',
+        'input[type="image"]',
+        'label[for]',
+        'select',
+        'textarea',
+        'button',
+        '.link'
+      ]}
+    />
                     <CloseRounded
                         style={{
                             position: "absolute",
