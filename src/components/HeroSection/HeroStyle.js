@@ -21,7 +21,7 @@ export const HeroContainer = styled.div`
 export const HeroBg = styled.div`
   position: absolute;
   display: flex;
-  justify-content: end;
+  justify-content: start;
   top: 0;
   right: 0;
   bottom: 0;
@@ -45,6 +45,7 @@ export const HeroBg = styled.div`
 export const HeroInnerContainer = styled.div`
   position: relative;
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -77,8 +78,8 @@ export const HeroLeftContainer = styled.div`
 export const HeroRightContainer = styled.div`
   width: 100%;
   display: flex;
-  order: 2;
-  justify-content: end;
+  order: 4;
+  justify-content: start;
   gap: 12px;
   @media (max-width: 960px) {
     order: 1;
@@ -99,7 +100,7 @@ export const Img = styled.img`
   max-width: 400px;
   max-height: 400px;
   border-radius: 50%;
-  border: 2px solid ${({ theme }) => theme.primary};
+  border: 2px solid rgb(59 130 246);
 
   @media (max-width: 768px) {
     max-width: 400px;
@@ -146,7 +147,7 @@ export const TextLoop = styled.div`
 `;
 
 export const Span = styled.span`
-  color: ${({ theme }) => theme.primary};
+color: rgb(59 130 246);
   cursor: pointer;
 `;
 
@@ -181,23 +182,20 @@ export const ResumeButton = styled.a`
     font-size: 20px;
     font-weight: 600;
     transition: all 0.2s ease-in-out !important;
-    background: hsla(271, 100%, 50%, 1);
-    background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+    background: linear-gradient(225deg, rgb(29 78 216) 30%, rgb(96 165 250) 100%);
     box-shadow:  20px 20px 60px #1F2634,
     -20px -20px 60px #1F2634;
+    
     &:hover {
         transform: scale(1.05);
-    transition: all 0.4s ease-in-out;
-    box-shadow:  20px 20px 60px #1F2634,
-    filter: brightness(1);
+        transition: all 0.4s ease-in-out;
+        box-shadow:  20px 20px 60px #1F2634,
+        filter: brightness(1);
     }    
-    
     
     @media (max-width: 640px) {
         padding: 12px 0;
         font-size: 18px;
     } 
-
 `;
+
